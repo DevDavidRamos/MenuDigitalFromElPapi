@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/menuPrincipal">
+
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="com.example.menuelpapi.presentacion.burger.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.menuelpapi.presentacion.menus.MenuPrincipal"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" >
+        <action
+            android:id="@+id/action_menuPrincipal_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_hotDogs"
+            app:destination="@id/hotDogs" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_tacos"
+            app:destination="@id/tacos" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_paponas"
+            app:destination="@id/paponas" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotDogs"
+        android:name="com.example.menuelpapi.presentacion.hotdog.HotDogs"
+        android:label="fragment_hot_dogs"
+        tools:layout="@layout/fragment_hot_dogs" />
+    <fragment
+        android:id="@+id/tacos"
+        android:name="com.example.menuelpapi.presentacion.tacos.Tacos"
+        android:label="fragment_tacos"
+        tools:layout="@layout/fragment_tacos" />
+    <fragment
+        android:id="@+id/paponas"
+        android:name="com.example.menuelpapi.presentacion.paponas.Paponas"
+        android:label="fragment_paponas"
+        tools:layout="@layout/fragment_paponas" />
+</navigation>
